@@ -1,9 +1,8 @@
-###TODO:未配置好
+#TODO,curreent not working
 services:
   backend:
     build:
-      context: backend
-      target: dev-envs
+      context: Server
     restart: always
     secrets:
       - db-password
@@ -23,7 +22,7 @@ services:
     # If you really want to use MySQL, uncomment the following line
     #image: mysql:8.0.19
     environment:
-      - MYSQL_DATABASE=example
+      - MYSQL_DATABASE=logan
       - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db-password
     restart: always
     healthcheck:
@@ -47,8 +46,7 @@ services:
       - spring-mysql
   frontend:
     build:
-      context: frontend
-      target: dev-envs
+      context: LoganSite
     ports:
       - 3000:3000
     volumes:
@@ -58,8 +56,7 @@ services:
     depends_on:
       - backend
     expose:
-      - 3306
-      - 33060
+      - 3300
 volumes:
   db-data: {}
 secrets:
