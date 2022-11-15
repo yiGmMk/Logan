@@ -74,7 +74,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.12</version>
+            <version>8.0.28</version>
         </dependency>
 
         <!--spring 全家桶-->
@@ -123,7 +123,11 @@
             <artifactId>spring-jdbc</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-jdbc</artifactId>
+            <version>8.5.23</version>
+        </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
@@ -163,12 +167,6 @@
             <artifactId>spring-tx</artifactId>
             <version>4.3.0.RELEASE</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>tomcat-jdbc</artifactId>
-            <version>8.5.23</version>
-        </dependency>
         <dependency>
             <artifactId>commons-codec</artifactId>
             <groupId>commons-codec</groupId>
@@ -184,7 +182,6 @@
 
     <build>
         <finalName>${artifactId}-${env}-${version}</finalName>
-
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
