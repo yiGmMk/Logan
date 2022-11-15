@@ -30,6 +30,7 @@ Logan 开源的是一整套日志体系，包括日志的收集存储，上报�
 ## iOS
 
 ### 环境要求
+
 以下是可以稳定跑起来的iOS配置，系统和xcode版本略大于或小于下面的版本理论上也是可以跑起来的。
 
 ```
@@ -62,6 +63,7 @@ end
 ```
 
 最后在项目根目录运行以下命令：
+
 ```
 pod install 
 
@@ -72,6 +74,7 @@ pod install
 [iOS SDK](https://github.com/Meituan-Dianping/Logan/tree/master/Logan/iOS)
 
 ## Android
+
 ```
 NDK: r16b
 
@@ -82,18 +85,21 @@ Jdk: 1.7 或 1.8（推荐）
 ```
 
 ### Android SDK 接入文档
+
 [Android SDK](https://github.com/Meituan-Dianping/Logan/tree/master/Example/Logan-Android)
 
-
 ## Web SDK
+
 可在 Web 平台（ H5 或 PC 环境）上运行的 Logan 组件，实现前端日志的本地存储与上报功能。
 
 ### 接入方式
+
 下载 npm 包
 
 ```
 npm install --save logan-web
 ```
+
 或者
 
 ```
@@ -128,17 +134,17 @@ const reportResult = await Logan.report({
 
 [Web SDK](https://github.com/Meituan-Dianping/Logan/tree/master/Logan/WebSDK)
 
-
 ## Server
 
 ### Server 接入文档
 
 [Server](https://github.com/Meituan-Dianping/Logan/tree/master/Logan/Server)
-
+[使用docker部署Server&ServerSite](./Logan/README.md)
 
 ## LoganSite
 
 ### 环境要求
+
 ```
 Node: ^10.15.3
 yarn: ^1.15.2 或 npm ^6.12.0
@@ -159,17 +165,17 @@ API_BASE_URL=http://location/to/your/server:port
 然后执行以下命令：
 
 ```
-$ cd $LOGAN_SITE
-$ npm install
-$ npm run start
+cd $LOGAN_SITE
+npm install
+npm run start
 ```
 
 或
 
 ```
-$ cd $LOGAN_SITE
-$ yarn
-$ yarn start
+cd $LOGAN_SITE
+yarn
+yarn start
 ```
 
 #### 构建
@@ -191,22 +197,22 @@ const BASE_URL = "http://location/to/your/server:port"
 然后执行以下命令：
 
 ```
-$ cd $LOGAN_SITE
-$ npm install
-$ npm run build
+cd $LOGAN_SITE
+npm install
+npm run build
 ```
 
 或
 
 ```
-$ cd $LOGAN_SITE
-$ yarn
-$ yarn build
+cd $LOGAN_SITE
+yarn
+yarn build
 ```
+
 ### LoganSite 接入文档
 
 [LoganSite](https://github.com/Meituan-Dianping/Logan/tree/master/Logan/LoganSite)
-
 
 # 最佳实践
 
@@ -240,14 +246,14 @@ Logan核心体系由四大模块构成：
 
 ![Logan_System](https://mss-shon.sankuai.com/v1/mss_7d6cd84b52d543248bbb734abd392e9a/logan-open-source/logan_system.png)
 
-Module | Open Source | Processing | Planning 
-:-: | :-: | :-: | :-: 
-iOS & macOS | √ | | | 
-Android | √| | | 
-Web | √ | | | 
-Back End | √| | | 
-Front End | √ | | | 
-Mini Programs | | √ | | 
+Module | Open Source | Processing | Planning
+:-: | :-: | :-: | :-:
+iOS & macOS | √ | | |
+Android | √| | |
+Web | √ | | |
+Back End | √| | |
+Front End | √ | | |
+Mini Programs | | √ | |
 
 # 贡献
 
@@ -257,29 +263,29 @@ Mini Programs | | √ | |
 
 ## 客户端
 
-* **白帆** - [baitian0521](https://github.com/baitian0521)
+- **白帆** - [baitian0521](https://github.com/baitian0521)
 
-* **曹立成** - [Richard-Cao](https://github.com/Richard-Cao)
+- **曹立成** - [Richard-Cao](https://github.com/Richard-Cao)
 
-* **姜腾** - [jiangteng](https://github.com/jiangteng)
+- **姜腾** - [jiangteng](https://github.com/jiangteng)
 
-* **杨向南** - [yangxiangnan](https://github.com/yangxiangnan)
+- **杨向南** - [yangxiangnan](https://github.com/yangxiangnan)
 
-* **马小军** - [Mr-xiaojun](https://github.com/Mr-xiaojun)
+- **马小军** - [Mr-xiaojun](https://github.com/Mr-xiaojun)
 
-* **罗恒** - [luoheng158](https://github.com/luoheng158)
+- **罗恒** - [luoheng158](https://github.com/luoheng158)
 
 ## Web端
 
-* **孙懿** - [sylvia1106](https://github.com/sylvia1106)
+- **孙懿** - [sylvia1106](https://github.com/sylvia1106)
 
-* **余若晟** - [Retrospection](https://github.com/Retrospection)
+- **余若晟** - [Retrospection](https://github.com/Retrospection)
 
 ## 服务端
 
-* **贺院超** - [he-yuanchao](https://github.com/he-yuanchao)
+- **贺院超** - [he-yuanchao](https://github.com/he-yuanchao)
 
-* **罗志林** - [zlLuo](https://github.com/zlLuo)
+- **罗志林** - [zlLuo](https://github.com/zlLuo)
 
 [贡献者列表](https://github.com/Meituan-Dianping/Logan/graphs/contributors)
 

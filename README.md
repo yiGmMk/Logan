@@ -9,9 +9,11 @@
 [中文说明](./README-zh.md)
 
 # Overview
+
 Logan is a log platform with ability to collect、store、upload and analyze front-end logs. We provide five components, including [iOS SDK](https://github.com/Meituan-Dianping/Logan/tree/master/Logan/iOS), [Android SDK](https://github.com/Meituan-Dianping/Logan/tree/master/Example/Logan-Android), [Web SDK](https://github.com/Meituan-Dianping/Logan/tree/master/Logan/WebSDK), analysis services [Server SDK](https://github.com/Meituan-Dianping/Logan/tree/master/Logan/Server) and [LoganSite](https://github.com/Meituan-Dianping/Logan/tree/master/Logan/LoganSite). In addition, we also provide a Flutter plugin [Flutter Plugin](https://github.com/Meituan-Dianping/Logan/tree/master/Flutter).
 
 # Architecture
+
 ![Logan](https://mss-shon.sankuai.com/v1/mss_7d6cd84b52d543248bbb734abd392e9a/logan-open-source/logan_arch.png)
 
 ## Overivew of LoganSite
@@ -19,7 +21,6 @@ Logan is a log platform with ability to collect、store、upload and analyze fro
 **Search Logs**
 
 ![Logan](./img/logan_list_filter.gif)
-
 
 **Log Detail**
 
@@ -35,9 +36,9 @@ Logan is a log platform with ability to collect、store、upload and analyze fro
 
 ### How to use SDK in your project
 
-First create a file named Podfile, then copy the following code into the file. 
+First create a file named Podfile, then copy the following code into the file.
 
-```
+```bash
 source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '8.0'
@@ -48,6 +49,7 @@ pod 'Logan', '~> 1.2.5'
 
 end
 ```
+
 Finally run the following command in root directory of your project.
 
 ```
@@ -56,9 +58,8 @@ pod install
 
 ### iOS SDK document
 
-More to see: 
+More to see:
 [iOS SDK](https://github.com/Meituan-Dianping/Logan/tree/master/Logan/iOS)
-
 
 ## Android SDK
 
@@ -74,14 +75,15 @@ Jdk: 1.7 or 1.8（recomand）
 
 ### Android SDK document
 
-More to see: 
+More to see:
 [Android SDK](https://github.com/Meituan-Dianping/Logan/tree/master/Example/Logan-Android)
 
-
 ## Web SDK
+
 Web SDK supports logging in the H5 and browser environment.
 
 ### Install
+
 Install logan-web using `npm`:
 
 ```
@@ -96,9 +98,8 @@ yarn add logan-web
 
 ### Web SDK document
 
-More to see: 
+More to see:
 [Web SDK](https://github.com/Meituan-Dianping/Logan/tree/master/Logan/WebSDK)
-
 
 ## Server
 
@@ -106,35 +107,43 @@ More to see:
 
 [Server](https://github.com/Meituan-Dianping/Logan/tree/master/Logan/Server)
 
+[deploy Server & ServerSite using docker](./Logan/README.md)
 
 ## LoganSite
+
 LoganSite provides a visualized way for developers to scan and search logs uploaded from App and Web.
 
 ### Environment
-```
+
+```bash
 Node: ^10.15.3
 yarn: ^1.15.2 或 npm ^6.12.0
 ```
 
-### Install
+### Install 
 
 First, clone the repository into to local.
 
 Create `.env.development` in the directory of LoganSite,and set `API_BASE_URL` like below:
+
 ```bash
 API_BASE_URL=http://location/to/your/server:port
 ```
+
 Then execute the following command：
+
+```bash
+cd $LOGAN_SITE
+npm install
+npm run start
 ```
-$ cd $LOGAN_SITE
-$ npm install
-$ npm run start
-```
+
 or
-```
-$ cd $LOGAN_SITE
-$ yarn
-$ yarn start
+
+```bash
+cd $LOGAN_SITE
+yarn
+yarn start
 ```
 
 #### Build
@@ -142,27 +151,31 @@ $ yarn start
 First, clone the repository into to local.
 
 Replace the fourth line in LoganSite/src/common/api.js with follow:
+
 ```javascript
 const BASE_URL = "http://location/to/your/server:port"
 ```
+
 Then execute the following command：
+
+```bash
+cd $LOGAN_SITE
+npm install
+npm run build
 ```
-$ cd $LOGAN_SITE
-$ npm install
-$ npm run build
-```
+
 or
-```
-$ cd $LOGAN_SITE
-$ yarn
-$ yarn build
+
+```bash
+cd $LOGAN_SITE
+yarn
+yarn build
 ```
 
 ### LoganSite document
 
-More to see: 
+More to see:
 [LoganSite](https://github.com/Meituan-Dianping/Logan/tree/master/Logan/LoganSite)
-
 
 # Best Practices
 
@@ -184,7 +197,6 @@ The Logan core system consists of four modules:
 The new case analysis process is as follows:
 
 ![Logan_Case](https://mss-shon.sankuai.com/v1/mss_7d6cd84b52d543248bbb734abd392e9a/logan-open-source/logan_case.png)
-
 
 # Feature
 
@@ -209,21 +221,21 @@ Finally, we hope to provide a more complete integrated case analysis ecosystem.
 
 # Authors
 
-* **White Bai** - Core Developer - [baitian0521](https://github.com/baitian0521)
+- **White Bai** - Core Developer - [baitian0521](https://github.com/baitian0521)
 
-* **Richard Cao** - Core Developer - [Richard-Cao](https://github.com/Richard-Cao)
+- **Richard Cao** - Core Developer - [Richard-Cao](https://github.com/Richard-Cao)
 
-* **jiangteng** - Core Developer - [jiangteng](https://github.com/jiangteng)
+- **jiangteng** - Core Developer - [jiangteng](https://github.com/jiangteng)
 
-* **yangxiangnan** - Core Developer - [yangxiangnan](https://github.com/yangxiangnan)
+- **yangxiangnan** - Core Developer - [yangxiangnan](https://github.com/yangxiangnan)
 
-* **Mr-xiaojun** - Core Developer - [Mr-xiaojun](https://github.com/Mr-xiaojun)
+- **Mr-xiaojun** - Core Developer - [Mr-xiaojun](https://github.com/Mr-xiaojun)
 
 See also the list of [contributors](https://github.com/Meituan-Dianping/Logan/graphs/contributors) who participated in this project.
 
 # Contact
 
-WeChat ID: 
+WeChat ID:
 
 MTDPtech, MTDPtech01, MTDPtech03
 
@@ -232,6 +244,7 @@ MTDPtech, MTDPtech01, MTDPtech03
 Logan is licensed under the MIT License - see the [LICENSE](https://github.com/Meituan-Dianping/Logan/blob/master/LICENSE) file for details.
 
 # Article
+
 [A lightweight case logging system based on mobile platform developed by Meituan-Dianping — Logan](https://tech.meituan.com/Logan.html)
 
 [Logan: Open Source](https://tech.meituan.com/logan_open_source.html)
@@ -239,5 +252,6 @@ Logan is licensed under the MIT License - see the [LICENSE](https://github.com/M
 [Introduction to Logan Web SDK](https://tech.meituan.com/2020/01/09/meituan-logan.html)
 
 # Acknowledgments
+
 - [mbedtls](https://github.com/ARMmbed/mbedtls)
 - [cJSON](https://github.com/DaveGamble/cJSON)
