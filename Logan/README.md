@@ -18,3 +18,8 @@
 ### 前端服务
 
 本地访问地址:<http://localhost:3000/#/web-list>
+
+## 参考
+
+- maven构建应用镜像 <https://developer.aliyun.com/article/65274>
+- awesome-compose,样例配置<https://github.com/docker/awesome-compose>
