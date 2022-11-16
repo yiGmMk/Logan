@@ -31,13 +31,13 @@ services:
     networks:
       - logan-network
     volumes:
-      - ./scripts/migration:/etc/migrations
+      - ./scripts/migration/mysql:/etc/migrations
     command:
       [
         "-source",
         "file:///etc/migrations",
         "-database",
-        "mysql://logan:logan@tcp(logan-network:3306)/logan",
+        "mysql://logan:logan@tcp(db:3306)/logan",
         "up"
       ]
     depends_on:
