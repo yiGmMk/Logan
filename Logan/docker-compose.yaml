@@ -8,10 +8,10 @@ services:
       - logan-network
     depends_on:
       - db
-    ports:
-      - 8888:8080
     links:
       - db
+    ports:
+      - 8888:8080
   db:
     image: mysql:5.7
     restart: always
@@ -41,12 +41,16 @@ services:
         "mysql://logan:logan@tcp(logan-network:3306)/logan",
         "up"
       ]
+    depends_on:
+      - db
     links:
       - db
     restart: "no"
   phpmyadmin:
     image: phpmyadmin:5.2
     depends_on:
+      - db
+    links:
       - db
     ports:
       - 10050:80
