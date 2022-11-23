@@ -12,6 +12,20 @@ services:
       - db
     ports:
       - 8888:8080
+  backend-go:
+    build:
+      context: ServerGo
+    restart: always
+    networks:
+      - logan-network
+    depends_on:
+      - db
+    links:
+      - db
+    ports:
+      - 8887:8080
+    volumes:
+      - ./ServerGo/src/logan/server/cmd/:/config
   db:
     image: mysql:8.0
     restart: always
